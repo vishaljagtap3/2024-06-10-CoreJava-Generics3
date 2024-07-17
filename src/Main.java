@@ -1,6 +1,19 @@
 public class Main {
     public static void main(String[] args) {
 
+        Holder<String> hs = new Holder<>("BitCode");
+        hs.getData();
+
+        Holder<Holder<String>> holderOfHolder = new Holder<Holder<String>>(hs);
+        holderOfHolder.getData().getData();
+
+        Holder<int[]> holderArray = new Holder<int[]>(
+                new int[]{10, 20, 30, 40}
+        );
+        int[] array = holderArray.getData();
+
+
+
         /*Pair1 pair1 = new Pair1("roll", 100);
         pair1.display();
         Pair1 pair2 = new Pair1("name", "Vishal");
